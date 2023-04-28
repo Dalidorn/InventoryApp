@@ -2,7 +2,7 @@
 const { Schema, model } = require("mongoose");
 
 // create the model
-const itemSchema = new mongoose.Schema({
+const itemSchema = new Schema({
     name: { type: String, trim: true, required: true },
     description: { type: String, trim: true, required: true },
     role: { type: String, required: true},
