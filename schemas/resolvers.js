@@ -1,4 +1,4 @@
-const { Store, Item } = require("./models");
+const { Store, Item } = require("../models");
 
 const resolvers = {
 

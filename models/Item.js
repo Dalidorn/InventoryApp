@@ -7,7 +7,7 @@ const itemSchema = new Schema({
     description: { type: String, trim: true, required: true },
     role: { type: String, required: true},
     cost: { type: Number, required: true },
-    unitSize: { type: Number, required: true },
+    caseSize: { type: Number, required: true },
     PAR: { type: Number, required: true },
     currentQuantity: { type: Number },
     maxQuantity: { type: Number },

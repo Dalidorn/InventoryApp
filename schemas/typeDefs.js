@@ -23,7 +23,7 @@ const typeDefs = `#gql
         description: String!
         role: String!
         cost: Float!
-        unitSize: Float!
+        caseSize: Float!
         PAR: Float!
         currentQuantity: Int
         maxQuantity: Int
@@ -61,7 +61,7 @@ const typeDefs = `#gql
         description: String!
         role: String!
         cost: Float!
-        unitSize: Float!
+        caseSize: Float!
         PAR: Float!
         currentQuantity: Int
         maxQuantity: Int

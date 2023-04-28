@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Big Cups",
+        "description": "32oz large clear plastic cups from iSupply",
+        "role": "Direct Order",
+        "cost": 1599,
+        "caseSize": 20,
+        "PAR": 36
+    },
+    {
+        "name": "Napkins",
+        "description": "200 count brown trifold napkins from Restaurant Depot",
+        "role": "Direct Order",
+        "cost": 599,
+        "caseSize": 6,
+        "PAR": 12
+    },
+    {
+        "name": "Straws",
+        "description": "5000 count extra long straws from RDP",
+        "role": "Direct Order",
+        "cost": 1299,
+        "caseSize": 40,
+        "PAR": 10
+    },
+    {
+        "name": "Towels",
+        "description": "White cloth towels from XYZ supplier",
+        "role": "Direct Order",
+        "cost": 3599,
+        "caseSize": 100,
+        "PAR": 20
+    },
+    {
+        "name": "Wet Wipes",
+        "description": "Super special wet wipes",
+        "role": "Direct Order",
+        "cost": 1499,
+        "caseSize": 6,
+        "PAR": 8
+    }
+]

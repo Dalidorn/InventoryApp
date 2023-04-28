@@ -6,6 +6,11 @@ const { typeDefs, resolvers } = require("./schemas");
 const cors = require("cors");
 const dotenv = require("dotenv");
 
+// IMPORTING AUTO SEEDS
+const { Item } = require("./models/Item");
+const itemSeeds = require("./seeds/defaultItems.json")
+
+
 // Load .env File
 dotenv.config();
 
@@ -27,8 +32,16 @@ app.use(cors());
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
     await server.start();
-    
-    db.once('open', () => {
+
+    db.once('open', async () => {
+        // AUTO SEEDING ITEMS WITH DEFAULTS
+        try {
+            await Item.create(itemSeeds);
+        } catch (error) {
+            console.log(error);
+            process.exit(1);
+        }
+        console.log("Database Seeded");
 
         app.listen(PORT, () => {
             console.log(`API server running on port ${PORT}!`);
