@@ -5,7 +5,7 @@
     "scripts": {
       "client": "cd CLIENT && npm install && npm start",
       "dev": "concurrently \"npm run start\" \"npm run client\"",
-      "heroku-postbuild": "cd client && npm install && npm run build"
+      "heroku-postbuild": "cd CLIENT && npm install && npm run build"
     },
     "Dependencies": {
       "concurrently": "^6.2.1"
