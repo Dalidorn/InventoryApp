@@ -10,7 +10,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { Welcome } from "./components/welcome.js";
+import Welcome from "./components/welcome.js";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({

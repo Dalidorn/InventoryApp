@@ -10,13 +10,16 @@ function Welcome() {
     return <div>Loading...</div>;
   }
 
-  const stores = data.stores;
+  const stores = data?.stores;
+  if (data) {
+    console.log(data);
+  }
 
   return (
     <div>
       <h2>Stores:</h2>
       <ul>
-        {stores.map(store => (
+        {stores?.map(store => (
           <li key={store._id}>
             {/* <Link to={`/login/${store._id}`}>{store.name}</Link> */}
             {store.name}

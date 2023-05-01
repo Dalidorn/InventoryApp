@@ -37,9 +37,9 @@ const startApolloServer = async (typeDefs, resolvers) => {
     db.once("open", async () => {
 
         // AUTO SEEDING ITEMS WITH DEFAULTS
-        console.log("Dropping database...");
-        await db.dropDatabase();
-        console.log("Database dropped");
+        // console.log("Dropping database...");
+        // await db.dropDatabase();
+        // console.log("Database dropped");
         try {
             console.log("Seeding Items");
             await Item.create(itemSeeds);
