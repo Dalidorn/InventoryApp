@@ -3,10 +3,12 @@
     "version": "1.0.0",
     "description": "Prototype for inventory app",
     "scripts": {
-      "server" : "cd SERVER && npm install && npm run start",
-      "client": "cd CLIENT && npm install && npm build",
-      "start": "npm run server && npm run client",
-      "heroku-postbuild": "cd CLIENT && npm install && npm run build"
+        "server": "cd SERVER && npm install && npm run start",
+        "client": "cd CLIENT && npm install && npm build",
+        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "cd CLIENT && npm install && npm run build"
+    },
+    "dependencies": {
+        "concurrently": "^8.0.1"
     }
-  }
-  
+}
