@@ -15,7 +15,7 @@ const itemSeeds = require("./seeds/defaultItems.json")
 dotenv.config();
 
 // Declare Express Server, Port, ApolloServer, and DB from Atlas connection file
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 const db = require("./config/connection");
 const server = new ApolloServer({
