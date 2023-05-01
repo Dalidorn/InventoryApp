@@ -14,7 +14,7 @@ import Welcome from "./components/welcome.js";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: 'https://inventory-app-prototype-v1.herokuapp.com/graphql',
+  uri: 'http://localhost:4000/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
