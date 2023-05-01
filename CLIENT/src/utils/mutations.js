@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const CREATE_STORE = gql`
+export const CREATE_STORE = gql`
   mutation CreateStore($store: StoreInput!) {
     createStore(store: $store) {
       _id
@@ -15,7 +15,7 @@ const CREATE_STORE = gql`
   }
 `;
 
-const UPDATE_STORE = gql`
+export const UPDATE_STORE = gql`
   mutation UpdateStore($id: ID!, $store: StoreInput!) {
     updateStore(id: $id, store: $store) {
       _id
@@ -30,7 +30,7 @@ const UPDATE_STORE = gql`
   }
 `;
 
-const DELETE_STORE = gql`
+export const DELETE_STORE = gql`
   mutation DeleteStore($id: ID!) {
     deleteStore(id: $id) {
       _id
@@ -45,7 +45,7 @@ const DELETE_STORE = gql`
   }
 `;
 
-const CREATE_ITEM = gql`
+export const CREATE_ITEM = gql`
   mutation CreateItem($item: ItemInput!) {
     createItem(item: $item) {
       _id
@@ -55,7 +55,7 @@ const CREATE_ITEM = gql`
   }
 `;
 
-const UPDATE_ITEM = gql`
+export const UPDATE_ITEM = gql`
   mutation UpdateItem($id: ID!, $item: ItemInput!) {
     updateItem(id: $id, item: $item) {
       _id
@@ -65,7 +65,7 @@ const UPDATE_ITEM = gql`
   }
 `;
 
-const DELETE_ITEM = gql`
+export const DELETE_ITEM = gql`
   mutation DeleteItem($id: ID!) {
     deleteItem(id: $id) {
       _id
@@ -75,7 +75,7 @@ const DELETE_ITEM = gql`
   }
 `;
 
-const LOGIN = gql`
+export const LOGIN = gql`
   mutation Login($store: String!, $password: String!) {
     login(store: $store, password: $password) {
       token
@@ -94,7 +94,7 @@ const LOGIN = gql`
   }
 `;
 
-const MANAGER_LOGIN = gql`
+export const MANAGER_LOGIN = gql`
   mutation ManagerLogin($store: String!, $managerPass: String!) {
     managerLogin(store: $store, managerPass: $managerPass) {
       token

@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const GET_STORES = gql`
+export const GET_STORES = gql`
   query GetStores {
     stores {
       _id
@@ -15,7 +15,7 @@ const GET_STORES = gql`
   }
 `;
 
-const GET_STORE = gql`
+export const GET_STORE = gql`
   query GetStore($id: ID!) {
     store(id: $id) {
       _id
@@ -30,7 +30,7 @@ const GET_STORE = gql`
   }
 `;
 
-const GET_ITEMS = gql`
+export const GET_ITEMS = gql`
   query GetItems {
     items {
       _id
@@ -40,7 +40,7 @@ const GET_ITEMS = gql`
   }
 `;
 
-const GET_ITEM = gql`
+export const GET_ITEM = gql`
   query GetItem($id: ID!) {
     item(id: $id) {
       _id
