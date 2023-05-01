@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Brenens Cafe",
+        "address": "460 W 12th Ave, Columbus, OH 43210",
+        "role": "Store",
+        "contactPhone": "9999999999",
+        "contactEmail": "email@gmail.com",
+        "password": "abc123abc123",
+        "managerPass": "abc123abc123"
+    },
+    {
+        "name": "Brenz Columbus",
+        "address": "1551 Lennox Town Ln, Columbus, OH 43212",
+        "role": "Store",
+        "contactPhone": "9999999999",
+        "contactEmail": "email@gmail.com",
+        "password": "abc123abc123",
+        "managerPass": "abc123abc123"
+    },
+    {
+        "name": "Brenz Dublin",
+        "address": "6485 Perimeter Dr, Dublin, OH 43016",
+        "role": "Store",
+        "contactPhone": "9999999999",
+        "contactEmail": "email@gmail.com",
+        "password": "abc123abc123",
+        "managerPass": "abc123abc123"
+    },
+    {
+        "name": "Brenz New Albany",
+        "address": "4963 E Dublin Granville Rd, New Albany, OH 43081",
+        "role": "Store",
+        "contactPhone": "9999999999",
+        "contactEmail": "email@gmail.com",
+        "password": "abc123abc123",
+        "managerPass": "abc123abc123"
+    }
+]

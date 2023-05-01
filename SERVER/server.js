@@ -8,8 +8,9 @@ const dotenv = require("dotenv");
 
 // IMPORTING AUTO SEEDS
 const { Item } = require("./models/Item");
-const itemSeeds = require("./seeds/defaultItems.json")
-
+const { Store } = require("./models/Store");
+const itemSeeds = require("./seeds/defaultItems.json");
+const storeSeeds = require("./seeds/defaultStores.json");
 
 // Load .env File
 dotenv.config();
@@ -33,10 +34,17 @@ app.use(cors());
 const startApolloServer = async (typeDefs, resolvers) => {
     await server.start();
 
-    db.once('open', async () => {
+    db.once("open", async () => {
+
         // AUTO SEEDING ITEMS WITH DEFAULTS
+        console.log("Dropping database...");
+        await db.dropDatabase();
+        console.log("Database dropped");
         try {
+            console.log("Seeding Items");
             await Item.create(itemSeeds);
+            console.log("Seeding Stores");
+            await Store.create(storeSeeds);
         } catch (error) {
             console.log(error);
             process.exit(1);
@@ -45,7 +53,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
 
         app.listen(PORT, () => {
             console.log(`API server running on port ${PORT}!`);
-            console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+            console.log(`Use GraphQL at http://localhost:${PORT}`);
         })
     })
 };

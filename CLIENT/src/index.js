@@ -10,10 +10,11 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { Welcome } from "./components/Welcome.js";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'https://inventory-app-prototype-v1.herokuapp.com/graphql',
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -40,6 +41,7 @@ root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <App />
+      <Welcome />
     </ApolloProvider>
   </React.StrictMode>
 );
