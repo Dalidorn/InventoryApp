@@ -4,12 +4,9 @@
     "description": "Prototype for inventory app",
     "scripts": {
       "server" : "cd SERVER && npm install && npm run start",
-      "client": "cd CLIENT && npm install && npm start",
-      "start": "npx concurrently \"npm run server\" \"npm run client\"",
+      "client": "cd CLIENT && npm install && npm build",
+      "start": "npm run server && npm run client",
       "heroku-postbuild": "cd CLIENT && npm install && npm run build"
-    },
-    "Dependencies": {
-      "concurrently": "^6.2.1"
     }
   }
   
