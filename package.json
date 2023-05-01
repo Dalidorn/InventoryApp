@@ -5,7 +5,7 @@
     "scripts": {
       "server" : "cd SERVER && npm install && npm run start",
       "client": "cd CLIENT && npm install && npm start",
-      "start": "npx concurrently \"npm run start\" \"npm run client\"",
+      "start": "npx concurrently \"npm run server\" \"npm run client\"",
       "heroku-postbuild": "cd CLIENT && npm install && npm run build"
     },
     "Dependencies": {
